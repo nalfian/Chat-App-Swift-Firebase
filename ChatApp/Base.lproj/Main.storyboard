@@ -120,29 +120,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-Yk-q4g">
-                                <rect key="frame" x="15" y="103" width="384" height="744"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vmd-Ss-Rnp">
+                                <rect key="frame" x="15" y="76" width="384" height="744"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFp-wT-1Ol">
-                                <rect key="frame" x="87" y="734" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSk-Ur-wcv">
+                                <rect key="frame" x="0.0" y="708" width="414" height="154"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xg8-ao-HTQ">
+                                        <rect key="frame" x="15" y="60" width="384" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-ag-Ke7">
+                                        <rect key="frame" x="15" y="105" width="384" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="SEND">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1s-Yg-oTl"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-go-u95">
+                                        <rect key="frame" x="15" y="15" width="384" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="l2L-go-u95" secondAttribute="trailing" constant="15" id="16y-cw-eRb"/>
+                                    <constraint firstAttribute="height" constant="154" id="4MD-m3-BbJ"/>
+                                    <constraint firstItem="l2L-go-u95" firstAttribute="top" secondItem="zSk-Ur-wcv" secondAttribute="top" constant="15" id="4qJ-ej-0Vy"/>
+                                    <constraint firstItem="Xg8-ao-HTQ" firstAttribute="top" secondItem="l2L-go-u95" secondAttribute="bottom" constant="15" id="85o-wd-pRE"/>
+                                    <constraint firstAttribute="trailing" secondItem="bu8-ag-Ke7" secondAttribute="trailing" constant="15" id="JwJ-hW-38Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xg8-ao-HTQ" secondAttribute="trailing" constant="15" id="Lfc-j6-Qdf"/>
+                                    <constraint firstItem="Xg8-ao-HTQ" firstAttribute="leading" secondItem="zSk-Ur-wcv" secondAttribute="leading" constant="15" id="NQs-xr-O3J"/>
+                                    <constraint firstItem="l2L-go-u95" firstAttribute="leading" secondItem="zSk-Ur-wcv" secondAttribute="leading" constant="15" id="WUI-5A-Z5b"/>
+                                    <constraint firstItem="bu8-ag-Ke7" firstAttribute="leading" secondItem="zSk-Ur-wcv" secondAttribute="leading" constant="15" id="hn4-gO-oBi"/>
+                                    <constraint firstItem="bu8-ag-Ke7" firstAttribute="top" secondItem="Xg8-ao-HTQ" secondAttribute="bottom" constant="15" id="m5r-SN-B7z"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tLc-Yk-q4g" secondAttribute="trailing" constant="15" id="6zy-nB-WZi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tLc-Yk-q4g" secondAttribute="bottom" constant="15" id="FCp-IR-2Jk"/>
-                            <constraint firstItem="tLc-Yk-q4g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="edu-et-rgR"/>
-                            <constraint firstItem="tLc-Yk-q4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="zeQ-GG-mMv"/>
+                            <constraint firstItem="zSk-Ur-wcv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Agg-0u-u7z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zSk-Ur-wcv" secondAttribute="trailing" id="e7h-ZH-NWJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zSk-Ur-wcv" secondAttribute="bottom" id="mNV-xL-HYc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="tLc-Yk-q4g" id="QXd-AS-klX"/>
+                        <outlet property="inputViewBottom" destination="mNV-xL-HYc" id="w5X-tZ-FdE"/>
+                        <outlet property="messageTextView" destination="Xg8-ao-HTQ" id="Qdi-3C-QTB"/>
+                        <outlet property="nameInputView" destination="l2L-go-u95" id="SsK-hE-dek"/>
+                        <outlet property="textView" destination="Vmd-Ss-Rnp" id="Lc5-iD-d2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

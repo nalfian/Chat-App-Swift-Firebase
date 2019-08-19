@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var nameInputView: UITextField!
     @IBOutlet weak var messageTextView: UITextField!
+    @IBOutlet weak var inputViewBottom: NSLayoutConstraint!
     var databaseRef: DatabaseReference!
     let userDefaults = UserDefaults.standard
     var roomName: String? = nil
-    @IBOutlet weak var inputViewBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
